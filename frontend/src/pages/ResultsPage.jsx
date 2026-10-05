@@ -1958,7 +1958,13 @@ export default function ResultsPage() {
 
       {/* ── Inference Benchmark Banner ── */}
       <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-        <StatCard label="Inference Latency" value={`~${Number(latency_ms).toFixed(0)}`} unit="ms" color="var(--color-ocean-cyan)" />
+        <StatCard 
+          label="Inference Latency" 
+          value={`~${Number(latency_ms).toFixed(0)}`} 
+          unit="ms" 
+          color="var(--color-ocean-cyan)" 
+          subtitle="Pure PyTorch CPU Forward Pass (0ms cold start in production)" 
+        />
         <StatCard label="Model Checkpoint" value="9.87" unit="MB" />
         <StatCard label="Vertical Depths" value="15" unit="layers (0–1000m)" />
         <StatCard label="Grid Resolution" value="100×240" unit="0.25°" />

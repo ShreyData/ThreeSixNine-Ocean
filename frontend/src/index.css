@@ -284,3 +284,50 @@ input[type=range] {
   background: #e2e8f0;
   border-radius: 4px;
 }
+
+/* ── Model Inference Loading Animations ── */
+@keyframes sonarRipple {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(2, 132, 199, 0.25), inset 0 0 10px rgba(2, 132, 199, 0.15);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(2, 132, 199, 0.55), inset 0 0 18px rgba(2, 132, 199, 0.3);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes shimmerProgress {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes warmNoticePulse {
+  0%, 100% {
+    border-color: #f59e0b;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.12);
+  }
+  50% {
+    border-color: #d97706;
+    box-shadow: 0 6px 22px rgba(245, 158, 11, 0.28);
+  }
+}
+
